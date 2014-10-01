@@ -1,79 +1,205 @@
+
 <!DOCTYPE html>
 <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="-1">
+    <title>大辽尖峰时刻：全民寻找房祖名！</title>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Demo : 椤甸潰灞曠ずdemo">
+    <link rel="shortcut icon" href="me.png">
+    <link rel="icon" href="me.png" >
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link type="text/css" href="m.css"  rel="stylesheet">
+    <link type="text/css" href="comment.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://ln.qq.com/images/2014zt/08/WXnav/menu.css" media="all">
+    <script src="1.js"></script>
+    <script src="2.js"></script>
+    <script type="text/javascript">
 
-    <title>Demo</title>
-  </head>
+        window.shareData = {
+            "imgUrl": "me.png",
+            "timeLineLink": window.location.href,
+            "tTitle": "大辽尖峰时刻：全民寻找房祖名！",
+            "tContent": "尖峰时刻：全民寻找房祖名！虽然柯少向龙叔保证不会带坏房祖名,但龙叔强烈要求你找回祖名。"
+        };
+    </script>
 
-  <body>
+    <style>
+        a{text-decoration:none;}
+        ul{margin:0;padding:0;}
+        li{list-style:none; overflow: visible;}
+        #box{ top:30px}
+        #help{ padding:0 30px}
+        #index h1{ padding: 10px 0;}
+        .btn { margin:5px 30px}
+        #dialog .wx {padding-top:30px;}
+        #dialog .wx img{width:200px;height:200px;}
+        .nb{ border: none;color: inherit;cursor: pointer;display: inline-block;margin: 1px 0 0 0;text-transform: uppercase;letter-spacing: 1px;font-weight: 700;outline: none;position: relative;background: #fff;box-shadow: 0 -1px #dadada;font-size: 14px;height: 30px;width:100%;-webkit-tap-highlight-color: rgba(0,0,0,0); color: #333; text-align:center; line-height:30px;}
+        .menu { margin:0;padding:0; display: flex;flex-flow: row;position:absolute;bottom:0;width:100%;z-index:50;}
+        .menu ul{display: -webkit-box; -webkit-box-orient: horizontal;width:100%;}
+        .menu li a,.menu li{flex: 1;-webkit-box-flex: 1;}
+        .menu li a:hover{text-decoration:none;color:#fff;background: #f0a82c;}
+        .menu li a:hover{}
+        #dialog .inner .content{padding-top:0;}
+        #dialog .inner h3{font-size:30px; line-height:40px;}
+    </style>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/tvxqljw/demo">View on GitHub</a>
+</head>
+<body>
+<div class="grid">
+    <div class="page hide" id="loading" style="display: none;">
+        loading...
+    </div>
+    <div class="page hide" id="index" style="display: block;">
+        <h1>大辽尖峰时刻:</br>全民寻找房祖名</h1>
 
-          <h1 id="project_title">Demo</h1>
-          <h2 id="project_tagline">椤甸潰灞曠ずdemo</h2>
+        <div id="help">虽然柯少向龙叔保证不会带坏房祖名,但龙叔强烈要求你找回祖名。</div>
+        <div id="logo"></div>
+        <div class="btns">
+            <button data-type="color" class="btn play-btn">
+                开始游戏
+            </button>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/tvxqljw/demo/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/tvxqljw/demo/tarball/master">Download this project as a tar.gz file</a>
-            </section>
+        </div>
+    </div>
+    <div class="page hide" id="room">
+        <header>
+                    <span class="lv">
+                        得分：
+                        <em>
+                            1
+                        </em>
+                    </span>
+                    <span class="time">
+                    </span>
+                    <span class="btn btn-pause">
+                        暂停
+                    </span>
         </header>
+        <div id="box" class="lv1">
+        </div>
     </div>
+    <div class="page hide" id="dialog">
+        <div class="inner">
+            <div class="content gameover">
+                <p>
+                    经鉴定，您是：
+                </p>
+                <h3></h3>
+                <div class="btn-wrap">
+                    <button class="btn btn-restart">
+                        再来一次
+                    </button>
+                </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+                <div><h1>珍爱生命 远离毒品</div>
+            </div>
+            <div class="content pause">
+                <h3>
+                    游戏暂停
+                </h3>
+                <div class="btn-wrap">
+                    <button class="btn btn-resume">
+                        继续游戏
+                    </button>
+                </div>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+            </div>
+        </div>
+        <!--菜单-->
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+        <div data-role="widget" data-widget="nav4" class="nav4">
+            <nav>
+                <div id="nav4_ul" class="nav_4">
+                    <ul class="box">
+                        <li> <a href="http://ln.qq.com/zt2014/xice/index.htm" class=""><span>终结冰桶挑战</span></a>
+                            <!--<dl>
+                              <dd> <a href="#"><span>电话</span></a> </dd>
+                              <dd> <a href="#"><span>地址</span></a> </dd>
+                              <dd> <a href="#"><span>在线客服</span></a> </dd>
+                              <dd> <a href="#"><span>在线QQ</span></a> </dd>
+                            </dl>
+                          </li>-->
+                        <li> <a href="javascript:;" class=""><span>更多游戏</span></a>
+                            <dl>
+                                <dd> <a href="http://ln.qq.com/zt2014/h5games/index.htm"><span>寻找房祖名</span></a> </dd>
+                                <dd> <a href="http://ln.qq.com/zt2014/xice/index.htm"><span>终结冰桶挑战</span></a> </dd>
+                                <dd> <a href="http://ln.qq.com/zt2014/als/hero.htm"><span>漫威终结冰桶</span></a> </dd>
+                            </dl>
+                        </li>
+                        <li> <a href="http://ln.qq.com/" class=""><span>大辽网首页</span></a>
+                            <!--<dl>
+                              <dd> <a href="#"><span>微商城</span></a> </dd>
+                              <dd> <a href="#"><span>微餐饮</span></a> </dd>
+                              <dd> <a href="#"><span>微团购</span></a> </dd>
+                              <dd> <a href="#"><span>微汽车</span></a> </dd>
+                            </dl>-->
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="nav4_masklayer" class="masklayer_div on">&nbsp;</div>
+        </div>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we鈥檒l help you sort it out.</p>
-      </section>
+        <!--菜单-->
     </div>
+</div>
+<div class="bq" style="position: absolute;; left:50%; bottom:0px; margin-left:-48px">
+    <img src="http://mat1.gtimg.com/ln/images/2014zt/08/1819/logo.png" width="100px">
+</div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Demo maintained by <a href="https://github.com/tvxqljw">tvxqljw</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+<script type="text/javascript">
+    btGame.onlyVScreen();
+    btGame.playLogoAdv();
+    // btGame.setShare({
+    //     desc: "找出所有色块中颜色不同的一块。分享朋友圈，找到身边的色魔"
+    // });
+    window.addEventListener("orientationchange", function() {
+        window.location.reload();
+    });
 
-    
 
-  </body>
-</html>
+
+    function onShareComplete(res) {
+        window.location.href='http://mp.weixin.qq.com/s?__biz=MjM5NzU2NjM5Mg==&mid=201276677&idx=1&sn=b16cbfac903f873fb54bc70f62164d9c';
+    }
+
+
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, onShareComplete);
+        });
+    }, false);
+
+
+</script>
+<script src="3.js"></script>
+<script src="4.js"></script>
+<script src="http://ln.qq.com/images/2014zt/08/WXnav/nav4.js"></script>
+<script type="text/javascript">
+    nav4.bindClick(document.getElementById("nav4_ul").querySelectorAll("li>a"), document.getElementById("nav4_masklayer"));
+</script>
+
+<script language="javascript" src="http://pingjs.qq.com/ping.js"></script>
+<script language="javascript">if(typeof(pgvMain) == 'function') pgvMain();</script>
+
+</body></html><!--[if !IE]>|xGv00|184969dacb8ddd2f94a1b3c60d767153<![endif]-->
