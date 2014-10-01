@@ -41,14 +41,14 @@ var _config = {color: {allTime: 60,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7,
         this.lastLv = this.lv, this.lastGameTxt = d.txt, this.lastGamePercent = d.percent;
 
         // var shareTitle = this.lastLv > 0 ? "我闯过" + (this.lastLv + 1) + "关，击败" + this.lastGamePercent + "%的人！我是【" + this.lastGameTxt + "】！不服来战！" : "看你有多色？";
-        var shareTitle = "我在1分钟内" + (this.lastLv) + "次从柯少身边找到房祖名！可他不跟我走！";
+        var shareTitle = "我在1分钟内" + (this.lastLv) + "次从柯少身边找到哈哈靖！可她不跟我走！";
         window.shareData.tTitle=shareTitle;
         btGame.setShare({
             title: shareTitle
         });
         if (this.lastLv > 0) {
-            var scoreMsg = "你一共" + (this.lastLv) + "次从柯少身边找到房祖名，你的24k氪金眼还没瞎吗？快让你的朋友也来试试吧" ;
-            window.shareData.tTitle="我在1分钟内" + (this.lastLv) + "次从柯少身边找到房祖名！你也来试试！";
+            var scoreMsg = "你一共" + (this.lastLv) + "次从柯少身边找到哈哈靖，你的24k氪金眼还没瞎吗？快让你的朋友也来试试吧" ;
+            window.shareData.tTitle="我在1分钟内" + (this.lastLv) + "次从柯少身边找到哈哈靖！你也来试试！";
             btGame.playScoreMsg(scoreMsg);
         }
 
@@ -89,7 +89,7 @@ var _config = {color: {allTime: 60,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7,
     }};
     c.init(), a.API = {}
 }(window), function() {
-    var a = $("#box"), b = "span", c = $("#help p"), d = $("#help_color"), e = {lvT: ["龙叔的脑残粉", "龙叔的忠实粉", "龙叔的路人粉", "慧眼识祖名", "火眼金睛", "洞察一切", "两眼冒光", "24k氪金眼", "已被亮瞎！"],render: function(e, f) {
+    var a = $("#box"), b = "span", c = $("#help p"), d = $("#help_color"), e = {lvT: ["哈哈靖脑残粉", "哈哈靖的忠实粉", "哈哈靖的路人粉", "慧眼识哈哈靖", "火眼金睛", "洞察一切", "两眼冒光", "24k氪金眼", "已被亮瞎！"],render: function(e, f) {
         this.lv = f, c.hide(), d.show();
         var g = _config.color.lvMap[f] || _.last(_config.color.lvMap);
         this.d = 15 * Math.max(9 - g, 1), this.d = f > 20 ? 10 : this.d, this.d = f > 40 ? 8 : this.d, this.d = f > 50 ? 5 : this.d;
