@@ -1,6 +1,8 @@
-body{ background-color: #F06060; color: #fff; font: 12px/1.5 '微软雅黑';
+body{ background-color: #501171; color: #fff; font: 12px/1.5 '微软雅黑';
+
 }
 body>a{ display: none; }
+
 
 .page{
     position: absolute;
@@ -190,9 +192,9 @@ body>a{ display: none; }
     font-weight: 700;
     outline: none;
     position: relative;
-    background: #FCAD26;
+    background: #c490bf;
     border-radius: 7px;
-    box-shadow: 0 5px #DA9622;
+    box-shadow: 0 5px #8957a1;
     font-size: 20px;
     font-family: '寰蒋闆呴粦';
     height: 70px;
