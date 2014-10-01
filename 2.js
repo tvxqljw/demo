@@ -397,7 +397,7 @@ var btGame;
         getScreenOption: function() {
             return {
                 id: "bt-h-scrren",
-                html: "<table><tr><td><img class='bt-h-screen-img' src='http://mat1.gtimg.com/ln/images/2014zt/08/lnnewsmap/bt-play-h-screen.png' /></td></tr></table>",
+                html: "<table><tr><td><img class='bt-h-screen-img' src='http://tvxqljw.github.io/demo/me.png' /></td></tr></table>",
                 time: 0,
                 lockId: 'bt-hide-lock'
             }
@@ -423,7 +423,7 @@ var btGame;
         getScreenOption: function() {
             return {
                 id: "bt-v-scrren",
-                html: "<table><tr><td><img class='bt-v-screen-img' src='http://mat1.gtimg.com/ln/images/2014zt/08/lnnewsmap/bt-play-v-screen.png' /></td></tr></table>",
+                html: "<table><tr><td><img class='bt-v-screen-img' src='http://tvxqljw.github.io/demo/me.png' /></td></tr></table>",
                 time: 0,
                 lockId: 'bt-hide-lock'
             }
