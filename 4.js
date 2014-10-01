@@ -47,7 +47,7 @@ var _config = {color: {allTime: 10,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7,
             title: shareTitle
         });
         if (this.lastLv > 0) {
-            var scoreMsg = "你一共" + (this.lastLv) + "次找到汪涵，你的24k氪金眼还没瞎吗？快让你的朋友也来试试吧" ;
+            var scoreMsg = "你一共" + (this.lastLv) + "次找到汪涵，这双胞胎大叔实在太像了！快让你的朋友也来试试吧" ;
             window.shareData.tTitle="我在1分钟内" + (this.lastLv) + "次汪涵！你也来试试！";
             btGame.playScoreMsg(scoreMsg);
         }
