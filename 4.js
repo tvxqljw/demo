@@ -94,7 +94,7 @@ var _config = {color: {allTime: 10,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7,
         var g = _config.color.lvMap[f] || _.last(_config.color.lvMap);
         this.d = 15 * Math.max(9 - g, 1), this.d = f > 20 ? 10 : this.d, this.d = f > 40 ? 8 : this.d, this.d = f > 50 ? 5 : this.d;
         var h = Math.floor(Math.random() * e * e), i = this.getColor(255 - this.d), j = this.getLvColor(i[0]);
-        a.find(b).css("background-color", i[1]).data("type", "b").css({"background": "url(http://mat1.gtimg.com/ln/images/2014zt/08/1819/109451991.png)"+j[1], "background-size": "cover"}), a.find(b).eq(h).css("background-color", j[1]).data("type", "a").css({"background": "url(http://tvxqljw.github.io/demo/me.png)"+j[1], "background-size": "cover"});
+        a.find(b).css("background-color", i[1]).data("type", "b").css({"background": "url(http://mat1.gtimg.com/ln/images/2014zt/08/1819/109451991.png)"+j[1], "background-size": "cover"}), a.find(b).eq(h).css("background-color", j[1]).data("type", "a").css({"background": "url(http://tvxqljw.github.io/demo/xbox.png)"+j[1], "background-size": "cover"});
     },getColor: function(a) {
         var b = [Math.round(Math.random() * a), Math.round(Math.random() * a), Math.round(Math.random() * a)], c = "rgb(" + b.join(",") + ")";
         return [b, c]
