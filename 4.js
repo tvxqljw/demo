@@ -99,7 +99,9 @@ var _config = {color: {allTime: 30,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7,
 //        随机颜色
         var h = Math.floor(Math.random() * e * e), i = this.getColor(255 - this.d), j = this.getLvColor(i[0]);
 //        寻找的颜色替换成图片
-        a.find(b).css("background-color", i[1]).data("type", "b").css({"background": "url(http://tvxqljw.github.io/demo/default.png)"+j[1], "background-size": "cover"}), a.find(b).eq(h).css("background-color", j[1]).data("type", "a").css({"background": "url(http://tvxqljw.github.io/demo/special.png)"+j[1], "background-size": "cover"});
+        console.log('you have chosen role'+role);
+        var specialPic ="url(http://tvxqljw.github.io/demo/"+role+".png)";
+        a.find(b).css("background-color", i[1]).data("type", "b").css({"background": "url(http://tvxqljw.github.io/demo/default.png)"+j[1], "background-size": "cover"}), a.find(b).eq(h).css("background-color", j[1]).data("type", "a").css({"background": specialPic+j[1], "background-size": "cover"});
     },getColor: function(a) {
         var b = [Math.round(Math.random() * a), Math.round(Math.random() * a), Math.round(Math.random() * a)], c = "rgb(" + b.join(",") + ")";
         return [b, c]

@@ -121,16 +121,25 @@
 </div>
 
 <script>
-
     var role;
     var obj = document.getElementsByClassName('shero');
-function roleChoose(id){
-        for(var i =1; i<obj.length+1; i++){
-            $("#role"+i).removeClass("onSelect");
+    function roleChoose(id){
+            for(var i =1; i<obj.length+1; i++){
+                $("#role"+i).removeClass("onSelect");
+            }
+            $("#role"+id).addClass("onSelect");
+        if(id == 4){
+            id = random(1,4);
         }
-        $("#role"+id).addClass("onSelect");
-        role = id;
-}
+            role = id;
+    }
+
+    //获取范围内的随机数
+    function random(min,max){
+
+        return Math.floor(min+Math.random()*(max-min));
+
+    }
 
 </script>
 
