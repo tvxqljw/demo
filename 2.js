@@ -450,7 +450,7 @@ var btGame;
     function tip() {
         var a = bt.advertisement({
             id: id,
-            html: "<img class='bt-play-share-tip-img' src='http://mat1.gtimg.com/ln/images/2014zt/08/lnnewsmap/123arqwe.png' />",
+            html: "<img class='bt-play-share-tip-img' src='http://tvxqljw.github.io/demo/tip.png' />",
             time: 0
         });
         a.show();
