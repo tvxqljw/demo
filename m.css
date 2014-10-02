@@ -174,7 +174,9 @@ body>a{ display: none; }
 }
 
 #dialog{
-    background: url(http://tvxqljw.github.io/demo/share.png) top right no-repeat #430f5e;
+    background: url("back.jpg") no-repeat center;
+    background-size: cover;
+    /*background: url(http://tvxqljw.github.io/demo/share.png) top right no-repeat #430f5e;*/
     padding-top: 50px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -187,6 +189,7 @@ body>a{ display: none; }
 }
 #dialog .inner .content{
     padding-top: 50px;
+
 }
 #dialog .inner h3{
     line-height: 60px;
