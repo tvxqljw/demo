@@ -71,7 +71,7 @@ body>a{ display: none; }
 
 #help{
     height: 30px;
-    font-size: 22px;
+    font-size: 16px;
     color: #FFA1A1;
     text-align: center;
 }
@@ -82,7 +82,7 @@ body>a{ display: none; }
     /*background: url(../img/share.png) top right no-repeat #A74343;*/
     /*width: 208px;*/
     /*height: 82px;*/
-    width: 100%;
+    width: 85%;
     height: auto;
 }
 
