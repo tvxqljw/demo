@@ -80,8 +80,23 @@ body>a{ display: none; }
     margin: 15px auto;
     padding: 0;
     /*background: url(../img/share.png) top right no-repeat #A74343;*/
-    width: 208px;
-    height: 82px;
+    /*width: 208px;*/
+    /*height: 82px;*/
+    width: 100%;
+    height: auto;
+}
+
+.shero {
+    width: 46%;
+    height: 46%;
+    margin: 2%;
+    float: left;
+    border: 3px solid #4E4C5F;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    border-spacing: 5px;
 }
 
 #box{

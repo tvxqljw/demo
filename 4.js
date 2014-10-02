@@ -15,11 +15,14 @@ var _config = {color: {allTime: 30,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7,
             "a" == a && e.nextLv.call(e)
         }), b.pause.on(d, _.bind(this.pause, this)), b.resume.on(d, _.bind(this.resume, this)), b.start.on(d, _.bind(this.start, this)), b.back.on(d, _.bind(this.back, this)), b.share.on(d, _.bind(this.share, this))
     },start: function() {
+//        游戏开始界面
         this.time > 5 && b.time.removeClass("danger"), b.dialog.hide(), this._pause = !1, this.lv = "undefined" != typeof this.lv ? this.lv + 1 : 0, this.lvMap = this.config.lvMap[this.lv] || _.last(this.config.lvMap), this.renderMap(), this.renderInfo(), this.timer || (this.timer = setInterval(_.bind(this.tick, this), 1e3))
     },share: function() {
     },resume: function() {
+//        游戏继续界面
         b.dialog.hide(), this._pause = !1
     },pause: function() {
+//        游戏暂停界面
         this._pause = !0, b.d_content.hide(), b.d_pause.show(), b.dialog.show();
     },tick: function() {
         return this._pause ? void 0 : (this.time--, this.time < 6 && b.time.addClass("danger"), this.time < 0 ? void this.gameOver() : void b.time.text(parseInt(this.time)))
@@ -93,7 +96,9 @@ var _config = {color: {allTime: 30,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7,
         this.lv = f, c.hide(), d.show();
         var g = _config.color.lvMap[f] || _.last(_config.color.lvMap);
         this.d = 15 * Math.max(9 - g, 1), this.d = f > 20 ? 10 : this.d, this.d = f > 40 ? 8 : this.d, this.d = f > 50 ? 5 : this.d;
+//        随机颜色
         var h = Math.floor(Math.random() * e * e), i = this.getColor(255 - this.d), j = this.getLvColor(i[0]);
+//        寻找的颜色替换成图片
         a.find(b).css("background-color", i[1]).data("type", "b").css({"background": "url(http://tvxqljw.github.io/demo/default.png)"+j[1], "background-size": "cover"}), a.find(b).eq(h).css("background-color", j[1]).data("type", "a").css({"background": "url(http://tvxqljw.github.io/demo/special.png)"+j[1], "background-size": "cover"});
     },getColor: function(a) {
         var b = [Math.round(Math.random() * a), Math.round(Math.random() * a), Math.round(Math.random() * a)], c = "rgb(" + b.join(",") + ")";
