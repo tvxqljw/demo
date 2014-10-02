@@ -174,9 +174,7 @@ body>a{ display: none; }
 }
 
 #dialog{
-    background: url("back.jpg") no-repeat center;
-    background-size: cover;
-    /*background: url(http://tvxqljw.github.io/demo/share.png) top right no-repeat #430f5e;*/
+    background: url(http://tvxqljw.github.io/demo/share.png) top right no-repeat #430f5e;
     padding-top: 50px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -307,8 +305,12 @@ body>a{ display: none; }
 .btn-boyaa img{height: 30px; width: 30px; vertical-align: middle; margin-left: 10px;}
 /*  |xGv00|36198f24dd2ebb3d4e948fe323a120cf */
 
-.bg{
-    position: absolute;
+.ad{
+    margin: auto;
     text-align: center;
-    bottom:0;
+    width: 80%;
+    padding:15% 5%;
+    background: url("back.jpg") no-repeat;
+    background-size: cover;
+    font-size: 16px;
 }
