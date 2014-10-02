@@ -99,6 +99,7 @@ body>a{ display: none; }
     border-spacing: 5px;
 }
 .shero img {
+    display: block;
     width: 100%;
     height: auto;
 }
