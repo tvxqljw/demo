@@ -44,6 +44,12 @@
         .menu li a:hover{}
         #dialog .inner .content{padding-top:0;}
         #dialog .inner h3{font-size:30px; line-height:40px;}
+
+        /*.onSelect {*/
+            /*border: 3px solid #EEEEEE;*/
+            /*background: url(http://mat1.gtimg.com/ln/images/2014zt/08/alsGame/ice_bg.jpg) 0 0 no-repeat;*/
+            /*background-size: 100%;*/
+        /*}*/
     </style>
 
 </head>
@@ -57,10 +63,10 @@
 
         <div id="help">汪涵、曹格和小五假扮grace。让我们把他们找出来吧！</div>
         <div id="logo">
-            <div class="shero"><img src="1.png"></div>
-            <div class="shero"><img src="2.png"></div>
-            <div class="shero"><img src="3.png"></div>
-            <div class="shero"><img src="4.png"></div>
+            <div id="role1" class="shero" onclick="roleChoose(1)"><img src="1.png"></div>
+            <div id="role2" class="shero" onclick="roleChoose(2)"><img src="2.png"></div>
+            <div id="role3" class="shero" onclick="roleChoose(3)"><img src="3.png"></div>
+            <div id="role4" class="shero" onclick="roleChoose(4)"><img src="4.png"></div>
         </div>
         <div class="btns">
             <button data-type="color" class="btn play-btn">
@@ -114,6 +120,21 @@
     </div>
 </div>
 
+<script>
+
+    var role;
+    var obj = document.getElementsByClassName('shero');
+function roleChoose(id){
+        for(var i =1; i<obj.length+1; i++){
+            $("#role"+i).removeClass("onSelect");
+        }
+        $("#role"+id).addClass("onSelect");
+        role = id;
+        alert("i have choose role"+role);
+
+}
+
+</script>
 
 <script type="text/javascript">
     btGame.onlyVScreen();
