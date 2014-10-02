@@ -88,6 +88,7 @@ body>a{ display: none; }
 
 .shero {
     width: 46%;
+    height: 46%;
     margin: 2%;
     float: left;
     border: 3px solid #4E4C5F;
