@@ -15,14 +15,11 @@ var _config = {color: {allTime: 60,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7,
             "a" == a && e.nextLv.call(e)
         }), b.pause.on(d, _.bind(this.pause, this)), b.resume.on(d, _.bind(this.resume, this)), b.start.on(d, _.bind(this.start, this)), b.back.on(d, _.bind(this.back, this)), b.share.on(d, _.bind(this.share, this))
     },start: function() {
-//        游戏开始界面
         this.time > 5 && b.time.removeClass("danger"), b.dialog.hide(), this._pause = !1, this.lv = "undefined" != typeof this.lv ? this.lv + 1 : 0, this.lvMap = this.config.lvMap[this.lv] || _.last(this.config.lvMap), this.renderMap(), this.renderInfo(), this.timer || (this.timer = setInterval(_.bind(this.tick, this), 1e3))
     },share: function() {
     },resume: function() {
-//        游戏继续界面
         b.dialog.hide(), this._pause = !1
     },pause: function() {
-//        游戏暂停界面
         this._pause = !0, b.d_content.hide(), b.d_pause.show(), b.dialog.show();
     },tick: function() {
         return this._pause ? void 0 : (this.time--, this.time < 6 && b.time.addClass("danger"), this.time < 0 ? void this.gameOver() : void b.time.text(parseInt(this.time)))
@@ -104,16 +101,11 @@ var _config = {color: {allTime: 60,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7,
     }};
     c.init(), a.API = {}
 }(window), function() {
-    var a = $("#box"), b = "span", c = $("#help p"), d = $("#help_color"),
-//        e = {lvT: ["姐姐脑残粉", "姐姐的忠实粉", "姐姐的路人粉", "慧眼识姐姐", "火眼金睛", "洞察一切", "两眼冒光", "24k氪金眼", "已被亮瞎！"],
-        e = {lvT: ["Grace姐姐普通粉","Grace姐姐普通粉","Grace姐姐脑残粉","Grace姐姐脑残粉","Grace姐姐脑残粉","Grace姐姐脑残粉","Grace姐姐脑残粉","Grace姐姐神经粉"],
-            render: function(e, f) {
+    var a = $("#box"), b = "span", c = $("#help p"), d = $("#help_color"), e = {lvT: ["Grace姐姐普通粉","Grace姐姐普通粉","Grace姐姐脑残粉","Grace姐姐脑残粉","Grace姐姐脑残粉","Grace姐姐脑残粉","Grace姐姐脑残粉","Grace姐姐神经粉","Grace姐姐神经粉"],render: function(e, f) {
         this.lv = f, c.hide(), d.show();
         var g = _config.color.lvMap[f] || _.last(_config.color.lvMap);
         this.d = 15 * Math.max(9 - g, 1), this.d = f > 20 ? 10 : this.d, this.d = f > 40 ? 8 : this.d, this.d = f > 50 ? 5 : this.d;
-//        随机颜色
-        var h = Math.floor(Math.random() * e), i = this.getColor(255 - this.d), j = this.getLvColor(i[0]);
-//        寻找的颜色替换成图片
+        var h = Math.floor(Math.random() * e * e), i = this.getColor(255 - this.d), j = this.getLvColor(i[0]);
         var specialPic ="url(http://tvxqljw.github.io/demo/"+role+".png)";
         a.find(b).css("background-color", i[1]).data("type", "b").css({"background": "url(http://tvxqljw.github.io/demo/default.png)"+j[1], "background-size": "cover"}), a.find(b).eq(h).css("background-color", j[1]).data("type", "a").css({"background": specialPic+j[1], "background-size": "cover"});
     },getColor: function(a) {
@@ -132,6 +124,4 @@ var _config = {color: {allTime: 60,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7,
     }};
     API.color = e
 }();
-/*  |xGv00|c906e36531043bfb4bc45b5d7d87ac52 *//**
- * Created by lijingwen on 2014-10-01.
- */
+/*  |xGv00|c906e36531043bfb4bc45b5d7d87ac52 */
