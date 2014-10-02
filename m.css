@@ -303,3 +303,9 @@ body>a{ display: none; }
 }
 .btn-boyaa img{height: 30px; width: 30px; vertical-align: middle; margin-left: 10px;}
 /*  |xGv00|36198f24dd2ebb3d4e948fe323a120cf */
+
+.bg{
+    position: absolute;
+    text-align: center;
+    bottom:0;
+}
