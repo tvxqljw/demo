@@ -1,5 +1,5 @@
 /*! 1 2014-07-30 */
-var _config = {color: {allTime: 10,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7, 7, 8, 8, 8, 8, 8, 8, 9]},pic: {isOpen: !1,allTime: 5,addTime: 0,lvMap: [2, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8]}};
+var _config = {color: {allTime: 60,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7, 7, 8, 8, 8, 8, 8, 8, 9]},pic: {isOpen: !1,allTime: 5,addTime: 0,lvMap: [2, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8]}};
 !function() {
     var a = $("#box"), b = {lv: $("#room .lv em"),time: $("#room .time"),start: $("#dialog .btn-restart"),back: $("#dialog .btn-back"),share: $("#dialog .btn-share"),pause: $("#room .btn-pause"),resume: $("#dialog .btn-resume"),dialog: $("#dialog"),d_content: $("#dialog .content"),d_pause: $("#dialog .pause"),d_gameover: $("#dialog .gameover")}, c = {init: function(a, b, c) {
         this.type = a, this.api = API[a], this.config = _config[a], this.reset(), this.parent = c, this.el = b, this.renderUI(), this.inited || this.initEvent(), this.inited = !0, this.start()
@@ -106,7 +106,7 @@ var _config = {color: {allTime: 10,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7,
 }(window), function() {
     var a = $("#box"), b = "span", c = $("#help p"), d = $("#help_color"),
 //        e = {lvT: ["姐姐脑残粉", "姐姐的忠实粉", "姐姐的路人粉", "慧眼识姐姐", "火眼金睛", "洞察一切", "两眼冒光", "24k氪金眼", "已被亮瞎！"],
-        e = {lvT: ["Grace姐姐普通粉","Grace姐姐脑残粉","Grace姐姐神经粉"],
+        e = {lvT: ["Grace姐姐普通粉","Grace姐姐普通粉","Grace姐姐脑残粉","Grace姐姐脑残粉","Grace姐姐脑残粉","Grace姐姐脑残粉","Grace姐姐脑残粉","Grace姐姐神经粉"],
             render: function(e, f) {
         this.lv = f, c.hide(), d.show();
         var g = _config.color.lvMap[f] || _.last(_config.color.lvMap);
