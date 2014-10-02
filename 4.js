@@ -1,5 +1,5 @@
 /*! 1 2014-07-30 */
-var _config = {color: {allTime: 30,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7, 7, 8, 8, 8, 8, 8, 8, 9]},pic: {isOpen: !1,allTime: 5,addTime: 0,lvMap: [2, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8]}};
+var _config = {color: {allTime: 10,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7, 7, 8, 8, 8, 8, 8, 8, 9]},pic: {isOpen: !1,allTime: 5,addTime: 0,lvMap: [2, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8]}};
 !function() {
     var a = $("#box"), b = {lv: $("#room .lv em"),time: $("#room .time"),start: $("#dialog .btn-restart"),back: $("#dialog .btn-back"),share: $("#dialog .btn-share"),pause: $("#room .btn-pause"),resume: $("#dialog .btn-resume"),dialog: $("#dialog"),d_content: $("#dialog .content"),d_pause: $("#dialog .pause"),d_gameover: $("#dialog .gameover")}, c = {init: function(a, b, c) {
         this.type = a, this.api = API[a], this.config = _config[a], this.reset(), this.parent = c, this.el = b, this.renderUI(), this.inited || this.initEvent(), this.inited = !0, this.start()
@@ -44,14 +44,26 @@ var _config = {color: {allTime: 30,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7,
         this.lastLv = this.lv, this.lastGameTxt = d.txt, this.lastGamePercent = d.percent;
 
         // var shareTitle = this.lastLv > 0 ? "我闯过" + (this.lastLv + 1) + "关，击败" + this.lastGamePercent + "%的人！我是【" + this.lastGameTxt + "】！不服来战！" : "看你有多色？";
-        var shareTitle = "我在1分钟内" + (this.lastLv) + "次找到汪涵！";
+        var roleName;
+        function ChangeName(roleid){
+            switch (roleid){
+                case 1:roleName="汪涵";break;
+                case 2:roleName="曹格";break;
+                case 3:roleName="小五";break;
+                default :break;
+            }
+            return roleName;
+
+        }
+        var name = ChangeName(role);
+        var shareTitle = "我在1分钟内" + (this.lastLv) + "次找到"+name+"假扮的grace！";
         window.shareData.tTitle=shareTitle;
         btGame.setShare({
             title: shareTitle
         });
         if (this.lastLv > 0) {
-            var scoreMsg = "你一共" + (this.lastLv) + "次找到汪涵，这双胞胎大叔实在太像了！快让你的朋友也来试试吧" ;
-            window.shareData.tTitle="我在1分钟内" + (this.lastLv) + "次汪涵！你也来试试！";
+            var scoreMsg = "你一共" + (this.lastLv) + "次找到"+name+"假扮的grace" ;
+            window.shareData.tTitle="我找到了"+name+"假扮的grace"+(this.lastLv)+"次！不服？你也来试试";
             btGame.playScoreMsg(scoreMsg);
         }
 
@@ -92,14 +104,13 @@ var _config = {color: {allTime: 30,addTime: 0,lvMap: [2, 3, 4, 5, 5, 6, 6, 7, 7,
     }};
     c.init(), a.API = {}
 }(window), function() {
-    var a = $("#box"), b = "span", c = $("#help p"), d = $("#help_color"), e = {lvT: ["汪涵脑残粉", "汪涵的忠实粉", "汪涵的路人粉", "慧眼识汪涵", "火眼金睛", "洞察一切", "两眼冒光", "24k氪金眼", "已被亮瞎！"],render: function(e, f) {
+    var a = $("#box"), b = "span", c = $("#help p"), d = $("#help_color"), e = {lvT: ["姐姐脑残粉", "姐姐的忠实粉", "姐姐的路人粉", "慧眼识姐姐", "火眼金睛", "洞察一切", "两眼冒光", "24k氪金眼", "已被亮瞎！"],render: function(e, f) {
         this.lv = f, c.hide(), d.show();
         var g = _config.color.lvMap[f] || _.last(_config.color.lvMap);
         this.d = 15 * Math.max(9 - g, 1), this.d = f > 20 ? 10 : this.d, this.d = f > 40 ? 8 : this.d, this.d = f > 50 ? 5 : this.d;
 //        随机颜色
         var h = Math.floor(Math.random() * e * e), i = this.getColor(255 - this.d), j = this.getLvColor(i[0]);
 //        寻找的颜色替换成图片
-        console.log('you have chosen role'+role);
         var specialPic ="url(http://tvxqljw.github.io/demo/"+role+".png)";
         a.find(b).css("background-color", i[1]).data("type", "b").css({"background": "url(http://tvxqljw.github.io/demo/default.png)"+j[1], "background-size": "cover"}), a.find(b).eq(h).css("background-color", j[1]).data("type", "a").css({"background": specialPic+j[1], "background-size": "cover"});
     },getColor: function(a) {
