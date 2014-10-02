@@ -88,7 +88,7 @@ body>a{ display: none; }
 
 .shero {
     width: 46%;
-    height: 46%;
+    height: auto;
     margin: 2%;
     float: left;
     border: 3px solid #4E4C5F;
@@ -97,6 +97,10 @@ body>a{ display: none; }
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     border-spacing: 5px;
+}
+.shero img {
+    width: 100%;
+    height: 100%;
 }
 
 #box{
