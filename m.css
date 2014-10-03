@@ -307,11 +307,12 @@ body>a{ display: none; }
 
 .ad{
     margin: auto;
-    text-align: center;
     width: 80%;
-    padding:8% 5%;
     color: #f5f5f3;
-    background: url("back.jpg") no-repeat;
-    background-size: cover;
     font-size: 16px;
+}
+
+.ad img{
+    width: 100%;
+    height: 100%;
 }
